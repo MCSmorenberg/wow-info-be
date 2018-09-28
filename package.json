@@ -1,0 +1,29 @@
+{
+  "name": "wow-info-be",
+  "version": "1.0.0",
+  "description": "Middleware for the wow-info application",
+  "scripts": {
+    "start:watch": "nodemon",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MCSmorenberg/wow-info-be.git"
+  },
+  "author": "Maurice Smorenberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MCSmorenberg/wow-info-be/issues"
+  },
+  "homepage": "https://github.com/MCSmorenberg/wow-info-be#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "typescript": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^10.11.2",
+    "nodemon": "^1.18.4",
+    "ts-node": "^7.0.1"
+  }
+}
