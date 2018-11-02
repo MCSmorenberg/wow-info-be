@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/MCSmorenberg/wow-info-be#readme",
   "dependencies": {
+    "axios": "^0.18.0",
+    "config": "^2.0.1",
     "cors": "^2.8.4",
     "ejs": "^2.6.1",
     "express": "^4.16.3",

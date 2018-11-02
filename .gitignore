@@ -34,6 +34,7 @@ build
 /libpeerconnection.log
 /typings
 .env
+/config/local.json
 
 # e2e
 /e2e/*.js

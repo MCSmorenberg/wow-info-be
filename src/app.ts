@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 import ejs from 'ejs';
 
 import routes from './routes';
+import corsMiddleware from './middleware/corsMiddleware';
 
 const createApp = () => {
     const app = express();
@@ -15,6 +16,8 @@ const createApp = () => {
     app.set('views', `${__dirname}/../public`);
     app.engine('html', ejs.renderFile);
     app.set('view engine', 'html');
+
+    app.use(corsMiddleware);
 
     app.use('/', routes());
 
