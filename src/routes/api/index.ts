@@ -1,15 +1,13 @@
 import express from 'express';
 
-import apiRoutes from './api';
+import mountsGet from './get';
 
 const indexRoutes = () => {
     const router = express.Router();
-    router.get('/', (req, res) => {
-        res.render('index');
-    });
-    router.use('/api', apiRoutes());
+
+    router.get('/', mountsGet);
 
     return router;
-}
+};
 
 export default indexRoutes;
