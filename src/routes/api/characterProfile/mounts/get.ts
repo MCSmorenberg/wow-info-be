@@ -1,14 +1,14 @@
+import { Request, Response, NextFunction } from 'express';
 import getMounts from '../../../../modules/mounts/getMounts';
 
-const mountsGet = async<T>(url, params) => {;
+const mountsGet = async (req: Request, res: Response, next: NextFunction) => {;
     try {
-        const mounts: any = await getMounts(url, params);
+        const mounts: any = await getMounts();
 
-        console.log('yyyyyyeeeeeeaaaahhhhhhhhhhh', mounts);
-        return mounts
+        res.status(200).send(mounts);
     } catch (error) {
 
-        throw new Error(error);;
+        return next(error);
     }
 };
 

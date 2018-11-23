@@ -1,10 +1,9 @@
 import config from 'config';
 import axios from 'axios';
 
-const mountsGet = async<T>(url, params) => {
+const mountsGet = async<T>() => {
     const apiKey = config.get('blizzard.apiKey');
     const uri = 'https://eu.api.battle.net/wow/character/Executus/Maxiima?fields=mounts&locale=en_GB&apikey=' + apiKey;
-
 
 //     const request = require("request");
 
@@ -39,10 +38,11 @@ const mountsGet = async<T>(url, params) => {
     try {
         const response = await axios.get(uri);
         const data = response.data;
-        // console.log(data);
+
         return data;
     } catch (error) {
         console.log(error);
+        throw new Error();
     }
 };
 
