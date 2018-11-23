@@ -1,11 +1,11 @@
 import express from 'express';
 
-import characterProfileRoutes from './characterProfile';
+import mountsGet from './get';
 
 const indexRoutes = () => {
     const router = express.Router();
 
-    router.use('/character', characterProfileRoutes());
+    router.get('/', mountsGet);
 
     return router;
 };
